@@ -1,0 +1,28 @@
+{
+  "name": "react-native-pulse",
+  "version": "1.0.0",
+  "description": "React Native Pulse Animation",
+  "main": "pulse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahlhoff/react-native-pulse.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "ios",
+    "react-native",
+    "animation",
+    "ui",
+    "pulse"
+  ],
+  "author": "Chad Sahlhoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahlhoff/react-native-pulse/issues"
+  },
+  "homepage": "https://github.com/sahlhoff/react-native-pulse#readme"
+}
