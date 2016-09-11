@@ -1,5 +1,7 @@
-
-import React, { Component } from 'react';
+import React, {
+  Component,
+  PropTypes
+} from 'react';
 import {
   View,
   Text,
@@ -9,15 +11,37 @@ import {
 
 class Pulse extends Component {
 
+  static propTypes = {
+    top: PropTypes.number,
+    color: PropTypes.string,
+    numPulses: PropTypes.number,
+    diameter: PropTypes.number,
+    speed: PropTypes.number,
+    duration: PropTypes.number
+  };
+
+
+  static defaultProps = {
+    top: 150,
+    color: 'blue',
+    numPulses: 3,
+    diameter: 400,
+    speed: 10,
+    duration: 1000
+  }
+
+
   constructor(props){
     super(props);
 
     this.state = {
       started: false,
-      top: props.top || 150,
-      color: props.color || 'blue',
-      numPulses: props.numPulses || 3,
-      maxDiameter: props.diameter || 400,
+      top: this.props.top,
+      color: this.props.color,
+      numPulses: this.props.numPulses,
+      maxDiameter: this.props.diameter,
+      speed: this.props.speed,
+      duration: this.props.duration,
       pulses: []
     };
 
@@ -32,13 +56,13 @@ class Pulse extends Component {
     while(a < this.state.numPulses){
       setTimeout(()=>{
         this._createPulse(a);
-      }, a * 1000);
+      }, a * this.state.duration);
       a++;
     }
 
     setInterval(() => {
       this._updatePulse();
-    }, 10);
+    }, this.state.speed);
   }
   
   render(){
