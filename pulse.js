@@ -8,6 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
+let timer;
 
 class Pulse extends Component {
 
@@ -60,9 +61,13 @@ class Pulse extends Component {
       a++;
     }
 
-    setInterval(() => {
+    timer = setInterval(() => {
       this._updatePulse();
     }, this.state.speed);
+  }
+
+  componentWillUnmount(){
+    clearInterval(timer);
   }
   
   render(){
