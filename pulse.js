@@ -8,8 +8,6 @@ import {
   StyleSheet,
 } from 'react-native';
 
-let timer;
-
 class Pulse extends Component {
 
   static propTypes = {
@@ -61,13 +59,13 @@ class Pulse extends Component {
       a++;
     }
 
-    timer = setInterval(() => {
+    this.timer = setInterval(() => {
       this._updatePulse();
     }, this.state.speed);
   }
 
   componentWillUnmount(){
-    clearInterval(timer);
+    clearInterval(this.timer);
   }
   
   render(){
