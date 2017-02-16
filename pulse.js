@@ -53,7 +53,7 @@ class Pulse extends Component {
 
     let a = 0;
     while(a < this.state.numPulses){
-      setTimeout(()=>{
+      this.createPulseTimer = setTimeout(()=>{
         this._createPulse(a);
       }, a * this.state.duration);
       a++;
@@ -65,6 +65,7 @@ class Pulse extends Component {
   }
 
   componentWillUnmount(){
+    clearTimeout(this.createPulseTimer);
     clearInterval(this.timer);
   }
   
