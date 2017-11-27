@@ -105,7 +105,7 @@ export default class Pulse extends Component {
         pulseKey    : pulses.length + 1,
         diameter    : this.props.initialDiameter,
         opacity     : .5,
-        centerOffset: this.props.initialDiameter / 2
+        centerOffset: ( this.props.diameter - this.props.initialDiameter ) / 2
       };
 
       pulses.push(pulse);
