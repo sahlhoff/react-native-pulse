@@ -102,9 +102,10 @@ export default class Pulse extends Component {
       let pulses = this.state.pulses;
 
       let pulse = {
-        pulseKey: pulses.length + 1,
-        diameter: this.props.initialDiameter,
-        opacity : .5
+        pulseKey    : pulses.length + 1,
+        diameter    : this.props.initialDiameter,
+        opacity     : .5,
+        centerOffset: this.props.initialDiameter / 2
       };
 
       pulses.push(pulse);
@@ -112,7 +113,7 @@ export default class Pulse extends Component {
       this.setState({pulses});
     }
 
-  }
+  };
 
   updatePulse = () => {
 

@@ -1,6 +1,6 @@
 {
   "name": "@lisbakke/react-native-pulse",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Native Pulse Animation",
   "main": "pulse.js",
   "scripts": {
