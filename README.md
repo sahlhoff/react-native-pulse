@@ -33,6 +33,7 @@ Component accepts several self-descriptive properties:
 - **`color`** _(String)_ - Backgroundcolor for pulse. React-native colors supported. Default color is blue.
 - **`numPulses`** _(Number)_ - This is the number of pulses that will be rendered. Defaults to 3.
 - **`diameter`** _(Number)_ - This is the maximum diameter that a pulse will be. Defaults to 400.
+- **`initialDiameter`** _(Number)_ - The diameter new pulses will start with. Defaults to 0.
 - **`style`** _(object)_ - Style properties for pulse container positioning eg.
 - **`image`** _(object)_ - Image for center pulse thumbnail.
 - **`speed`** _(Number)_ - Speed in milliseconds pulse will redraw. Defaults to 10.
