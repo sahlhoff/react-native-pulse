@@ -30,6 +30,7 @@ export default class Pulse extends Component {
         color: PropTypes.string,
         numPulses: PropTypes.number,
         diameter: PropTypes.number,
+        initialDiameter: PropTypes.number,
         speed: PropTypes.number,
         duration: PropTypes.number
     };
@@ -46,6 +47,7 @@ export default class Pulse extends Component {
         color: 'blue',
         numPulses: 3,
         diameter: 400,
+        initialDiameter: 0,
         speed: 10,
         duration: 1000
     }
@@ -101,8 +103,9 @@ export default class Pulse extends Component {
         
             let pulse = {
                 pulseKey: pulses.length + 1,
-                diameter: 0,
-                opacity: .5
+                diameter: this.props.initialDiameter,
+                opacity: .5,
+                centerOffset: ( this.state.maxDiameter - this.props.initialDiameter ) / 2
             };
 
             pulses.push(pulse);
