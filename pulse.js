@@ -72,6 +72,35 @@ export default class Pulse extends Component {
 
     mounted = true;
 
+  componentWillReceiveProps(props) {
+        if(props.color != this.state.color){
+            this.setState({
+                color: props.color
+            });
+        };
+        if(props.duration != this.state.duration) {
+            this.setState({
+                duration: props.duration
+            });
+        };
+        if(props.maxDiameter != this.state.maxDiameter) {
+            this.setState({
+                maxDiameter: props.maxDiameter
+            });
+        };
+        if(props.numPulses != this.state.numPulses) {
+            this.setState({
+                numPulses: props.numPulses
+            });
+        };
+        if(props.speed != this.state.speed) {
+            this.setState({
+                speed:props.speed
+            });
+        };
+    
+    }
+
     componentDidMount(){
         const {numPulses, duration, speed} = this.state;
 
