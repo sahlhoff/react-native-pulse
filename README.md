@@ -11,7 +11,7 @@
 ## Usage
 
 ```js
-const Pulse = require('react-native-pulse');
+const Pulse = require('react-native-pulse').default;
 
 class helloWorld extends Component {
   render() {
